@@ -1,3 +1,17 @@
 <template>
-    
+    <lightning-card title="Realtime Currency Exchange Rate" icon-name="standard:currency"></lightning-card>
+    <lightning-layout multiple-rows="true" vertical-align="end">
+        <lightning-layout-item size="12" small-device-size="4" medium-device-size="2" padding="around-small">
+            <div class="slds-form-element">
+                <lightning-combobox title="Select currency" label="From Base Currency" value={fromCurrencyValue} placeholder="--Select--"
+                options={options} onchange={handleFromCurrencyChange}></lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="4" medium-device-size="2" padding="around-small">
+            <div class="slds-form-element">
+                <lightning-combobox title="Select currency" label="To Currency" value={toCurrencyValue} placeholder="--Select--"
+                options={toCurrencyOptions} onchange={handleToCurrencyChange}></lightning-combobox>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>
